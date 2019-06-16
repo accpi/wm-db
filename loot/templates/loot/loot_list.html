@@ -1,0 +1,36 @@
+{% extends 'mission/base.html' %}
+{% block content %}
+    <article class="content-section">
+        <div class="page-details">
+            <h1>Loot List</h1>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table-sm table-hover">
+                <thead>
+                <tr class="bg-starcatyellow">
+                    <th scope="col">Name</th>
+                    <th scope="col">Rarity</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Attunement</th>
+                    <th scope="col">Text</th>
+                    <th scope="col">Mission</th>
+                </tr>
+                </thead>
+                {% for loot in object_list %}
+                    <tbody>
+                    <tr>
+                        <td><a href="{% url 'loot-detail' loot.id %}">{{ loot.name }}</a></td>
+                        <td>{{ loot.rarity }}</td>
+                        <td>{{ loot.type }}</td>
+                        <td>{{ loot.attunement }}</td>
+                        <td>{{ loot.blurb }}</td>
+                        <td><a href="{% url 'mission-detail' loot.mission.id %}">{{ loot.mission.title }}</a></td>
+                    </tr>
+                    </tbody>
+                {% endfor %}
+            </table>
+        </div>
+
+    </article>
+{% endblock content %}

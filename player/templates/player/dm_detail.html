@@ -1,0 +1,30 @@
+{% extends 'mission/base.html' %}
+{% block content %}
+    <article class="content-section">
+        <div class="page-details">
+            <h1><a href="{% url 'dm-detail' object_list.0.mission.dm.id %}">{{ object_list.0.mission.dm.reddit }}</a>'s Games</h1>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table-sm table-hover">
+                <thead>
+                <tr class="bg-starcatyellow">
+                    <th>Game</th>
+                    <th>Date</th>
+                    <th>Zone</th>
+                </tr>
+                </thead>
+                {% for history in object_list %}
+                    <tbody>
+                        <tr>
+                            <td><a href="{% url 'mission-detail' history.mission.id %}">{{ history.mission.title }}</a></td>
+                            <td>{{ history.mission.date|date:'F d, Y' }}</td>
+                            <td><a href="{% url 'zone-detail' history.mission.zone.id %}">{{ history.mission.zone }}</a></td>
+                        </tr>
+                    </tbody>
+                {% endfor %}
+            </table>
+        </div>
+
+    </article>
+{% endblock content %}

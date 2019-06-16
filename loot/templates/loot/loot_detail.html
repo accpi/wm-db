@@ -1,0 +1,40 @@
+{% extends 'mission/base.html' %}
+{% block content %}
+
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <small class="text-muted">{{ object.mission.date|date:'F d, Y' }}</small>
+            </div>
+            <h2><a href="{% url 'loot-detail' object.id %}">{{ object.name }}</a></h2>
+            <h3 class="article-content">
+                <a href="{% url 'mission-detail' object.mission.id %}">{{ object.mission.title }}</a> -
+                <a href="{% url 'zone-detail' object.mission.zone.id %}">{{ object.mission.zone.name }}</a>
+            </h3>
+            <p class="article-content">
+            <div class="table-responsive">
+                <table class="table-sm table-hover">
+                    <thead>
+                    <tr class="bg-starcatyellow">
+                        <th scope="col">Rarity</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Attunement</th>
+                    </tr>
+                    </thead>
+                        <tbody>
+                        <tr>
+                            <td>{{ object.rarity }}</td>
+                            <td>{{ object.type }}</td>
+                            <td>{{ object.attunement }}</td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+            </p>
+
+            <p class="article-content item-text">
+                {{ object.text }}
+            </p>
+        </div>
+    </article>
+{% endblock content %}

@@ -1,0 +1,82 @@
+{% extends 'mission/base.html' %}
+{% block content %}
+    <article class="content-section">
+        <div class="page-details">
+            <h1><a href="{% url 'player-detail' character.0.player.id %}">/u/{{ character.0.player.reddit }}</a></h1>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table-sm table-hover">
+                <thead>
+                    <tr class="bg-starcatyellow">
+                        <th>Character</th>
+                        <th>Race</th>
+                        <th>Status</th>
+                        <th>Barbarian</th>
+                        <th>Bard</th>
+                        <th>Cleric</th>
+                        <th>Druid</th>
+                        <th>Fighter</th>
+                        <th>Monk</th>
+                        <th>Paladin</th>
+                        <th>Ranger</th>
+                        <th>Rogue</th>
+                        <th>Sorcerer</th>
+                        <th>Warlock</th>
+                        <th>Wizard</th>
+                    </tr>
+                </thead>
+                {% for character in character %}
+                    <tbody>
+                        <tr>
+                            <td><a href="{% url 'character-detail' character.id %}">{{ character.name }}</a></td>
+                            <td>{{ character.race }}</td>
+                            <td>
+                                {% if character.alive %}
+                                Alive
+                                {% else %}
+                                Dead
+                                {% endif %}
+                            </td>
+                            <td>{{ character.barbarian }}</td>
+                            <td>{{ character.bard }}</td>
+                            <td>{{ character.cleric }}</td>
+                            <td>{{ character.druid }}</td>
+                            <td>{{ character.fighter }}</td>
+                            <td>{{ character.monk }}</td>
+                            <td>{{ character.paladin }}</td>
+                            <td>{{ character.ranger }}</td>
+                            <td>{{ character.rogue }}</td>
+                            <td>{{ character.sorcerer }}</td>
+                            <td>{{ character.warlock }}</td>
+                            <td>{{ character.wizard }}</td>
+                        </tr>
+                    </tbody>
+                {% endfor %}
+            </table>
+        </div>
+
+
+        <div class="table-responsive">
+            <table class="table-sm table-hover">
+                <thead>
+                <tr class="bg-starcatyellow">
+                    <th>Game</th>
+                    <th>DM</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                {% for history in history %}
+                    <tbody>
+                        <tr>
+                            <td><a href="{% url 'mission-detail' history.mission.id %}">{{ history.mission.title }}</a></td>
+                            <td><a href="{% url 'dm-detail' history.mission.dm.id %}">{{ history.mission.dm }}</a></td>
+                            <td>{{ history.mission.date|date:'F d, Y' }}</td>
+                        </tr>
+                    </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </article>
+
+{% endblock content %}

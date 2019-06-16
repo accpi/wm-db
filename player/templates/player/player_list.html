@@ -1,0 +1,17 @@
+{% extends 'mission/base.html' %}
+{% block content %}
+    {% for player in object_list %}
+
+    <article class="media content-section">
+        <div class="media-body">
+            <h2>
+                <a href="{% url 'player-detail' player.id %}">{{ player.reddit }}</a>
+                {% if player.dm_bool %}
+                    (DM)
+                {% endif %}
+            </h2>
+
+        </div>
+    </article>
+    {% endfor %}
+{% endblock content %}
