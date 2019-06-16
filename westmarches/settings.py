@@ -21,12 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = 'o!z6k!ckvm*&)9uk9w+fnu$=y6y=w-jt@&4$5a^w_)s+&!9g&b'
-SECRET_KEY = os.environ.get('Secret_Key')
+SECRET_KEY = '6390f508b17e72a78a3554e6139c3e8541d3d2aef4f93978'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wm-db.herokuapp.com', 'wm.starcatcafe.com']
+ALLOWED_HOSTS = ['wm-db.herokuapp.com']
 
 
 # Application definition
