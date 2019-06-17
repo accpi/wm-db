@@ -5,15 +5,35 @@
     <article class="media content-section">
         <div class="media-body">
             <div class="article-metadata">
+                <a href="{% url 'dm-detail' mission.dm.id %}">{{ mission.dm }}</a> |
                 <a href="{% url 'zone-detail' mission.zone.id %}">{{ mission.zone }}</a>
-                <small class="text-muted">{{ mission.date|date:'F d, Y' }}</small>
+                <small class="text-muted">{{ mission.date|date:'F d, Y' }} | <a href="{{ mission.lfg }}">LFG</a> | <a href="{{ mission.aar }}">AAR</a></small>
             </div>
             <h2><a href="{% url 'mission-detail' mission.id %}">{{ mission.title }}</a></h2>
-            <h3><a href="{% url 'dm-detail' mission.dm.id %}">{{ mission.dm }}</a></h3>
-            <p class="article-content">
-                <a href="{{ mission.lfg }}">LFG</a> | <a href="{{ mission.aar }}">AAR</a>
-            </p>
         </div>
     </article>
     {% endfor %}
+        {% if is_paginated %}
+
+        {%  if page_obj.has_previous %}
+            <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+
+            {% if page_obj.number == num %}
+                <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3'%}
+                <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+
+        {% endfor %}
+
+        {%  if page_obj.has_next %}
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+        {% endif %}
+
+    {% endif %}
 {% endblock content %}

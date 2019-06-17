@@ -1,17 +1,30 @@
 {% extends 'mission/base.html' %}
 {% block content %}
-    {% for player in object_list %}
-
-    <article class="media content-section">
-        <div class="media-body">
-            <h2>
-                <a href="{% url 'player-detail' player.id %}">{{ player.reddit }}</a>
-                {% if player.dm_bool %}
-                    (DM)
-                {% endif %}
-            </h2>
-
+        <article class="content-section">
+        <div class="page-details">
+            <h1>Players</h1>
         </div>
+
+        <div class="table-responsive">
+            <table class="table-sm table-hover">
+                <thead>
+                <tr class="bg-starcatyellow">
+                    <th scope="col">Reddit</th>
+                    <th scope="col">Discord</th>
+                        <th scope="col">DM</th>
+                </tr>
+                </thead>
+                {% for player in object_list %}
+                    <tbody>
+                    <tr>
+                        <td><a href="{% url 'player-detail' player.id %}">/u/{{ player.reddit }}</a></td>
+                        <td>{{ player.discord }}</td>
+                        <td>{{ player.dm_bool }}</td>
+                    </tr>
+                    </tbody>
+                {% endfor %}
+            </table>
+        </div>
+
     </article>
-    {% endfor %}
 {% endblock content %}
