@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92330c85-1221-475e-ae58-43aa87633c42" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mission/templates/mission/mission_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/mission/templates/mission/mission_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mission/templates/mission/mission_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/mission/templates/mission/mission_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/templates/player/player_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/player/templates/player/player_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/player/templates/player/player_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="44" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="44" />
+            <state relative-caret-position="466">
+              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -38,7 +36,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
+            <state relative-caret-position="-608">
               <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
@@ -56,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mission/templates/mission/mission_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
@@ -110,12 +108,12 @@
       <list>
         <option value="$PROJECT_DIR$/mission/views.py" />
         <option value="$PROJECT_DIR$/player/templates/player/player_detail.html" />
-        <option value="$PROJECT_DIR$/player/templates/player/player_list.html" />
         <option value="$PROJECT_DIR$/player/views.py" />
         <option value="$PROJECT_DIR$/player/templates/player/character_list.html" />
         <option value="$PROJECT_DIR$/player/templates/player/race_list.html" />
         <option value="$PROJECT_DIR$/mission/templates/mission/mission_list.html" />
         <option value="$PROJECT_DIR$/mission/templates/mission/mission_detail.html" />
+        <option value="$PROJECT_DIR$/player/templates/player/player_list.html" />
       </list>
     </option>
   </component>
@@ -220,12 +218,12 @@
       <option name="presentableId" value="Default" />
       <updated>1560738963873</updated>
       <workItem from="1560738969022" duration="4170000" />
-      <workItem from="1560781099542" duration="626000" />
+      <workItem from="1560781099542" duration="820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4796000" />
+    <option name="totallyTimeSpent" value="4990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -289,23 +287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/player/templates/player/player_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/player/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/player/templates/player/race_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -323,10 +304,10 @@
     <entry file="file://$PROJECT_DIR$/mission/static/mission/style_secondary.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mission/templates/mission/mission_list.html">
+    <entry file="file://$PROJECT_DIR$/mission/templates/mission/mission_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="174" selection-start-line="9" selection-start-column="174" selection-end-line="9" selection-end-column="174" />
+        <state relative-caret-position="114">
+          <caret line="6" column="96" selection-start-line="6" selection-start-column="96" selection-end-line="6" selection-end-column="96" />
         </state>
       </provider>
     </entry>
@@ -340,10 +321,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mission/templates/mission/mission_detail.html">
+    <entry file="file://$PROJECT_DIR$/mission/templates/mission/mission_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="96" selection-start-line="6" selection-start-column="96" selection-end-line="6" selection-end-column="96" />
+        <state relative-caret-position="171">
+          <caret line="9" column="174" selection-start-line="9" selection-start-column="174" selection-end-line="9" selection-end-column="174" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-608">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player/templates/player/player_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
         </state>
       </provider>
     </entry>

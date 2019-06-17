@@ -19,7 +19,11 @@
                     <tr>
                         <td><a href="{% url 'player-detail' player.id %}">/u/{{ player.reddit }}</a></td>
                         <td>{{ player.discord }}</td>
-                        <td>{{ player.dm_bool }}</td>
+                        {% if player.dm_bool %}
+                            <td>Yes</td>
+                        {% else %}
+                            <td></td>
+                        {% endif %}
                     </tr>
                     </tbody>
                 {% endfor %}
