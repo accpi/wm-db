@@ -10,6 +10,7 @@ from history.models import History
 class MissionListView(ListView):
     model = Mission
     ordering = ['-date']
+    paginate_by = 5
 
 
 class MissionDetailView(ListView):
