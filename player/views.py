@@ -87,7 +87,8 @@ class PlayerDeleteView(LoginRequiredMixin, DeleteView):
 
 class CharacterListView(ListView):
     model = Character
-    paginate_by = 7
+    paginate_by = 5
+
 
 class CharacterDetailView(ListView):
     model = History
@@ -120,6 +121,7 @@ class DMDetailView(ListView):
 class RaceListView(ListView):
     model = Character
     template_name = 'player/race_list.html'
+    paginate_by = 5
 
     def get_queryset(self):
         race = get_object_or_404(Race, pk=self.kwargs.get('pk'))

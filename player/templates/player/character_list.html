@@ -4,8 +4,7 @@
 
         <article class="media content-section">
             <div class="media-body">
-                <h2><a href="{% url 'character-detail' character.id %}">{{ character.name }}</a></h2>
-                <h3><a href="{% url 'player-detail' character.player.id %}">/u/{{ character.player.reddit }}</a></h3>
+                <h2><a href="{% url 'character-detail' character.id %}">{{ character.name }}</a> - <a href="{% url 'player-detail' character.player.id %}">/u/{{ character.player.reddit }}</a></h2>
                 <p class="article-content">
                 <div class="table-responsive">
                     <table class="table-sm table-hover">
