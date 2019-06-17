@@ -54,7 +54,7 @@
                     <tbody>
                     <tr>
                         <td><a href="{% url 'character-detail' character.id %}">{{ character.name }}</a></td>
-                        <td>{{ character.race }}</td>
+                        <td><a href="{% url 'race-list' character.race.id %}">{{ character.race }}</a></td>
                         <td>
                             {% if character.alive %}
                                 Alive
