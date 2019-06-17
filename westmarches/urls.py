@@ -6,13 +6,13 @@ from django.conf.urls.static import static
 
 from mission.views import (
     MissionListView, MissionDetailView, MissionCreateView, MissionUpdateView, MissionDeleteView,
-    ZoneDetailView
+    ZoneDetailView, ZoneListView
     )
 
 from player.views import (
     PlayerListView, PlayerDetailView, PlayerCreateView, PlayerUpdateView, PlayerDeleteView,
     CharacterListView, CharacterDetailView,
-    DMDetailView
+    DMDetailView, RaceListView
 )
 
 from loot.views import (
@@ -29,9 +29,11 @@ urlpatterns = [
     path('mission/<int:pk>/delete/', MissionDeleteView.as_view(), name='mission-delete'),
 
     path('zone/<int:pk>', ZoneDetailView.as_view(), name='zone-detail'),
+    path('zone/list/', ZoneListView.as_view(), name='zone-list'),
+    path('zone/', ZoneListView.as_view()),
 
-    path('player/', PlayerListView.as_view(), name='player-list'),
-    path('player/list/', PlayerListView.as_view()),
+    path('player/', PlayerListView.as_view()),
+    path('player/list/', PlayerListView.as_view(), name='player-list'),
     path('player/<int:pk>/', PlayerDetailView.as_view(), name='player-detail'),
     path('player/create/', PlayerCreateView.as_view(), name='player-create'),
     path('player/<int:pk>/update/', PlayerUpdateView.as_view(), name='player-update'),
@@ -40,9 +42,13 @@ urlpatterns = [
     path('dm/<int:pk>', DMDetailView.as_view(), name='dm-detail'),
 
     path('character/<int:pk>/', CharacterDetailView.as_view(), name='character-detail'),
-    path('character/', CharacterListView.as_view(), name='character-list'),
+    path('character/list/', CharacterListView.as_view(), name='character-list'),
+    path('character/', CharacterListView.as_view()),
 
-    path('loot/', LootListView.as_view(), name='loot-list'),
+    path('character/race/<int:pk>', RaceListView.as_view(), name='race-list'),
+
+    path('loot/', LootListView.as_view()),
+    path('loot/list/', LootListView.as_view(), name='loot-list'),
     path('loot/<int:pk>', LootDetailView.as_view(), name='loot-detail'),
 
     path('admin/', admin.site.urls),

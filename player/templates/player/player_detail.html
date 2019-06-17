@@ -8,49 +8,97 @@
         <div class="table-responsive">
             <table class="table-sm table-hover">
                 <thead>
-                    <tr class="bg-starcatyellow">
-                        <th>Character</th>
-                        <th>Race</th>
-                        <th>Status</th>
-                        <th>Barbarian</th>
-                        <th>Bard</th>
-                        <th>Cleric</th>
-                        <th>Druid</th>
-                        <th>Fighter</th>
-                        <th>Monk</th>
-                        <th>Paladin</th>
-                        <th>Ranger</th>
-                        <th>Rogue</th>
-                        <th>Sorcerer</th>
-                        <th>Warlock</th>
-                        <th>Wizard</th>
-                    </tr>
+                <tr class="bg-starcatyellow">
+                    <th>Character</th>
+                    <th>Race</th>
+                    <th>Status</th>
+                    {% if levels.barbarian > 0 %}
+                        <th scope="col">Barbarian</th>
+                    {% endif %}
+                    {% if levels.bard > 0 %}
+                        <th scope="col">Bard</th>
+                    {% endif %}
+                    {% if levels.cleric > 0 %}
+                        <th scope="col">Cleric</th>
+                    {% endif %}
+                    {% if levels.druid > 0 %}
+                        <th scope="col">Druid</th>
+                    {% endif %}
+                    {% if levels.fighter > 0 %}
+                        <th scope="col">Fighter</th>
+                    {% endif %}
+                    {% if levels.monk > 0 %}
+                        <th scope="col">Monk</th>
+                    {% endif %}
+                    {% if levels.paladin > 0 %}
+                        <th scope="col">Paladin</th>
+                    {% endif %}
+                    {% if levels.ranger > 0 %}
+                        <th scope="col">Ranger</th>
+                    {% endif %}
+                    {% if levels.rogue > 0 %}
+                        <th scope="col">Rogue</th>
+                    {% endif %}
+                    {% if levels.sorcerer > 0 %}
+                        <th scope="col">Sorcerer</th>
+                    {% endif %}
+                    {% if levels.warlock > 0 %}
+                        <th scope="col">Warlock</th>
+                    {% endif %}
+                    {% if levels.wizard > 0 %}
+                        <th scope="col">Wizard</th>
+                    {% endif %}
+                </tr>
                 </thead>
                 {% for character in character %}
                     <tbody>
-                        <tr>
-                            <td><a href="{% url 'character-detail' character.id %}">{{ character.name }}</a></td>
-                            <td>{{ character.race }}</td>
-                            <td>
-                                {% if character.alive %}
+                    <tr>
+                        <td><a href="{% url 'character-detail' character.id %}">{{ character.name }}</a></td>
+                        <td>{{ character.race }}</td>
+                        <td>
+                            {% if character.alive %}
                                 Alive
-                                {% else %}
+                            {% else %}
                                 Dead
-                                {% endif %}
-                            </td>
+                            {% endif %}
+                        </td>
+                        {% if levels.barbarian > 0 %}
                             <td>{{ character.barbarian }}</td>
+                        {% endif %}
+                        {% if levels.bard > 0 %}
                             <td>{{ character.bard }}</td>
+                        {% endif %}
+                        {% if levels.cleric > 0 %}
                             <td>{{ character.cleric }}</td>
+                        {% endif %}
+                        {% if levels.druid > 0 %}
                             <td>{{ character.druid }}</td>
+                        {% endif %}
+                        {% if levels.fighter > 0 %}
                             <td>{{ character.fighter }}</td>
+                        {% endif %}
+                        {% if levels.monk > 0 %}
                             <td>{{ character.monk }}</td>
+                        {% endif %}
+                        {% if levels.paladin > 0 %}
                             <td>{{ character.paladin }}</td>
+                        {% endif %}
+                        {% if levels.ranger > 0 %}
                             <td>{{ character.ranger }}</td>
+                        {% endif %}
+                        {% if levels.rogue > 0 %}
                             <td>{{ character.rogue }}</td>
+                        {% endif %}
+                        {% if levels.sorcerer > 0 %}
                             <td>{{ character.sorcerer }}</td>
+                        {% endif %}
+                        {% if levels.warlock > 0 %}
                             <td>{{ character.warlock }}</td>
+                        {% endif %}
+                        {% if levels.wizard > 0 %}
                             <td>{{ character.wizard }}</td>
-                        </tr>
+                        {% endif %}
+                    </tr>
                     </tbody>
                 {% endfor %}
             </table>
@@ -68,11 +116,11 @@
                 </thead>
                 {% for history in history %}
                     <tbody>
-                        <tr>
-                            <td><a href="{% url 'mission-detail' history.mission.id %}">{{ history.mission.title }}</a></td>
-                            <td><a href="{% url 'dm-detail' history.mission.dm.id %}">{{ history.mission.dm }}</a></td>
-                            <td>{{ history.mission.date|date:'F d, Y' }}</td>
-                        </tr>
+                    <tr>
+                        <td><a href="{% url 'mission-detail' history.mission.id %}">{{ history.mission.title }}</a></td>
+                        <td><a href="{% url 'dm-detail' history.mission.dm.id %}">{{ history.mission.dm }}</a></td>
+                        <td>{{ history.mission.date|date:'F d, Y' }}</td>
+                    </tr>
                     </tbody>
                 {% endfor %}
             </table>

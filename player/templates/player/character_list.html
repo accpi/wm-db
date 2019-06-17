@@ -1,10 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'mission/base.html' %}
+{% block content %}
+    {% for character in object_list %}
 
-</body>
-</html>
+        <article class="media content-section">
+            <div class="media-body">
+                <h2><a href="{% url 'character-detail' character.id %}">{{ character.name }}</a></h2>
+                <h3><a href="{% url 'player-detail' character.player.id %}">/u/{{ character.player.reddit }}</a></h3>
+                <p class="article-content">
+                <div class="table-responsive">
+                    <table class="table-sm table-hover">
+                        <thead>
+                        <tr class="bg-starcatyellow">
+                            <th scope="col">Race</th>
+                            {% if character.barbarian > 0 %}
+                                <th scope="col">Barbarian</th>
+                            {% endif %}
+                            {% if character.bard > 0 %}
+                                <th scope="col">Bard</th>
+                            {% endif %}
+                            {% if character.cleric > 0 %}
+                                <th scope="col">Cleric</th>
+                            {% endif %}
+                            {% if character.druid > 0 %}
+                                <th scope="col">Druid</th>
+                            {% endif %}
+                            {% if character.fighter > 0 %}
+                                <th scope="col">Fighter</th>
+                            {% endif %}
+                            {% if character.monk > 0 %}
+                                <th scope="col">Monk</th>
+                            {% endif %}
+                            {% if character.paladin > 0 %}
+                                <th scope="col">Paladin</th>
+                            {% endif %}
+                            {% if character.ranger > 0 %}
+                                <th scope="col">Ranger</th>
+                            {% endif %}
+                            {% if character.rogue > 0 %}
+                                <th scope="col">Rogue</th>
+                            {% endif %}
+                            {% if character.sorcerer > 0 %}
+                                <th scope="col">Sorcerer</th>
+                            {% endif %}
+                            {% if character.warlock > 0 %}
+                                <th scope="col">Warlock</th>
+                            {% endif %}
+                            {% if character.wizard > 0 %}
+                                <th scope="col">Wizard</th>
+                            {% endif %}
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="#">{{ character.race }}</a></td>
+                            {% if character.barbarian > 0 %}
+                                <td>{{ character.barbarian }}</td>
+                            {% endif %}
+                            {% if character.bard > 0 %}
+                                <td>{{ character.bard }}</td>
+                            {% endif %}
+                            {% if character.cleric > 0 %}
+                                <td>{{ character.cleric }}</td>
+                            {% endif %}
+                            {% if character.druid > 0 %}
+                                <td>{{ character.druid }}</td>
+                            {% endif %}
+                            {% if character.fighter > 0 %}
+                                <td>{{ character.fighter }}</td>
+                            {% endif %}
+                            {% if character.monk > 0 %}
+                                <td>{{ character.monk }}</td>
+                            {% endif %}
+                            {% if character.paladin > 0 %}
+                                <td>{{ character.paladin }}</td>
+                            {% endif %}
+                            {% if character.ranger > 0 %}
+                                <td>{{ character.ranger }}</td>
+                            {% endif %}
+                            {% if character.rogue > 0 %}
+                                <td>{{ character.rogue }}</td>
+                            {% endif %}
+                            {% if character.sorcerer > 0 %}
+                                <td>{{ character.sorcerer }}</td>
+                            {% endif %}
+                            {% if character.warlock > 0 %}
+                                <td>{{ character.warlock }}</td>
+                            {% endif %}
+                            {% if character.wizard > 0 %}
+                                <td>{{ character.wizard }}</td>
+                            {% endif %}
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </p>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

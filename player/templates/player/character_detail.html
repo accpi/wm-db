@@ -13,34 +13,85 @@
             <table class="table-sm table-hover">
                 <thead>
                 <tr class="bg-starcatyellow">
-                    <th scope="col">Barbarian</th>
-                    <th scope="col">Bard</th>
-                    <th scope="col">Cleric</th>
-                    <th scope="col">Druid</th>
-                    <th scope="col">Fighter</th>
-                    <th scope="col">Monk</th>
-                    <th scope="col">Paladin</th>
-                    <th scope="col">Ranger</th>
-                    <th scope="col">Rogue</th>
-                    <th scope="col">Sorcerer</th>
-                    <th scope="col">Warlock</th>
-                    <th scope="col">Wizard</th>
+                    <th scope="col">Race</th>
+                    {% if object_list.0.character.barbarian > 0 %}
+                        <th scope="col">Barbarian</th>
+                    {% endif %}
+                    {% if object_list.0.character.bard > 0 %}
+                        <th scope="col">Bard</th>
+                    {% endif %}
+                    {% if object_list.0.character.cleric > 0 %}
+                        <th scope="col">Cleric</th>
+                    {% endif %}
+                    {% if object_list.0.character.druid > 0 %}
+                        <th scope="col">Druid</th>
+                    {% endif %}
+                    {% if object_list.0.character.fighter > 0 %}
+                        <th scope="col">Fighter</th>
+                    {% endif %}
+                    {% if object_list.0.character.monk > 0 %}
+                        <th scope="col">Monk</th>
+                    {% endif %}
+                    {% if object_list.0.character.paladin > 0 %}
+                        <th scope="col">Paladin</th>
+                    {% endif %}
+                    {% if object_list.0.character.ranger > 0 %}
+                        <th scope="col">Ranger</th>
+                    {% endif %}
+                    {% if object_list.0.character.rogue > 0 %}
+                        <th scope="col">Rogue</th>
+                    {% endif %}
+                    {% if object_list.0.character.sorcerer > 0 %}
+                        <th scope="col">Sorcerer</th>
+                    {% endif %}
+                    {% if object_list.0.character.warlock > 0 %}
+                        <th scope="col">Warlock</th>
+                    {% endif %}
+                    {% if object_list.0.character.wizard > 0 %}
+                        <th scope="col">Wizard</th>
+                    {% endif %}
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td>{{ object_list.0.character.barbarian }}</td>
-                    <td>{{ object_list.0.character.bard }}</td>
-                    <td>{{ object_list.0.character.cleric }}</td>
-                    <td>{{ object_list.0.character.druid }}</td>
-                    <td>{{ object_list.0.character.fighter }}</td>
-                    <td>{{ object_list.0.character.monk }}</td>
-                    <td>{{ object_list.0.character.paladin }}</td>
-                    <td>{{ object_list.0.character.ranger }}</td>
-                    <td>{{ object_list.0.character.rogue }}</td>
-                    <td>{{ object_list.0.character.sorcerer }}</td>
-                    <td>{{ object_list.0.character.warlock }}</td>
-                    <td>{{ object_list.0.character.wizard }}</td>
+                    <td><a href="{% url 'race-list' object_list.0.character.race.id %}">{{ object_list.0.character.race }}</a></td>
+                    {% if object_list.0.character.barbarian > 0 %}
+                        <td>{{ object_list.0.character.barbarian }}</td>
+                    {% endif %}
+                    {% if object_list.0.character.bard > 0 %}
+                        <td>{{ object_list.0.character.bard }}</td>
+                    {% endif %}
+                    {% if object_list.0.character.cleric > 0 %}
+                        <td>{{ object_list.0.character.cleric }}</td>
+                    {% endif %}
+                    {% if object_list.0.character.druid > 0 %}
+                        <td>{{ object_list.0.character.druid }}</td>
+                    {% endif %}
+                    {% if object_list.0.character.fighter > 0 %}
+                        <td>{{ object_list.0.character.fighter }}</td>
+                    {% endif %}
+                    {% if object_list.0.character.monk > 0 %}
+                        <td>{{ object_list.0.character.monk }}</td>
+                    {% endif %}
+                    {% if object_list.0.character.paladin > 0 %}
+                        <td>{{ object_list.0.character.paladin }}</td>
+                    {% endif %}
+                    {% if object_list.0.character.ranger > 0 %}
+                        <td>{{ object_list.0.character.ranger }}</td>
+                    {% endif %}
+                    {% if object_list.0.character.rogue > 0 %}
+                        <td>{{ object_list.0.character.rogue }}</td>
+                    {% endif %}
+                    {% if object_list.0.character.sorcerer > 0 %}
+                        <td>{{ object_list.0.character.sorcerer }}</td>
+                    {% endif %}
+                    {% if object_list.0.character.warlock > 0 %}
+                        <td>{{ object_list.0.character.warlock }}</td>
+                    {% endif %}
+                    {% if object_list.0.character.wizard > 0 %}
+                        <td>{{ object_list.0.character.wizard }}</td>
+                    {% endif %}
+
                 </tr>
                 </tbody>
             </table>
