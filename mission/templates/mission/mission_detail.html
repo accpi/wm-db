@@ -4,6 +4,7 @@
         <div class="page-details">
             <h1><a href="{% url 'mission-detail' object_list.0.mission.id %}">{{ object_list.0.mission.title }}</a> - Details</h1>
             <h2>Zone: <a href="{% url 'zone-detail' object_list.0.mission.zone.id %}">{{ object_list.0.mission.zone.name }}</a> | DM: <a href="{% url 'dm-detail' object_list.0.mission.dm.id %}">{{ object_list.0.mission.dm.reddit }}</a></h2>
+            <h3><a href="{{ object_list.0.mission.lfg }}" target="_blank">LFG</a> | <a href="{{ object_list.0.mission.aar }}" target="_blank">AAR</a></h3>
         </div>
 
         <div class="table-responsive">

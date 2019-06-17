@@ -7,7 +7,7 @@
             <div class="article-metadata">
                 <a href="{% url 'dm-detail' mission.dm.id %}">{{ mission.dm }}</a> |
                 <a href="{% url 'zone-detail' mission.zone.id %}">{{ mission.zone }}</a>
-                <small class="text-muted">{{ mission.date|date:'F d, Y' }} | <a href="{{ mission.lfg }}">LFG</a> | <a href="{{ mission.aar }}">AAR</a></small>
+                <small class="text-muted">{{ mission.date|date:'F d, Y' }} | <a href="{{ mission.lfg }}" target="_blank">LFG</a> | <a href="{{ mission.aar }}" target="_blank">AAR</a></small>
             </div>
             <h2><a href="{% url 'mission-detail' mission.id %}">{{ mission.title }}</a></h2>
         </div>
