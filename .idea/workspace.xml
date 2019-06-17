@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92330c85-1221-475e-ae58-43aa87633c42" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/player/templates/player/player_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/player/templates/player/player_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/player/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/player/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player/templates/player/player_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+            <state relative-caret-position="418">
+              <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -36,10 +38,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-608">
+            <state relative-caret-position="190">
               <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/player/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="523">
+              <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,6 +114,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -108,12 +129,14 @@
       <list>
         <option value="$PROJECT_DIR$/mission/views.py" />
         <option value="$PROJECT_DIR$/player/templates/player/player_detail.html" />
-        <option value="$PROJECT_DIR$/player/views.py" />
         <option value="$PROJECT_DIR$/player/templates/player/character_list.html" />
         <option value="$PROJECT_DIR$/player/templates/player/race_list.html" />
         <option value="$PROJECT_DIR$/mission/templates/mission/mission_list.html" />
         <option value="$PROJECT_DIR$/mission/templates/mission/mission_detail.html" />
         <option value="$PROJECT_DIR$/player/templates/player/player_list.html" />
+        <option value="$PROJECT_DIR$/player/manager.py" />
+        <option value="$PROJECT_DIR$/player/views.py" />
+        <option value="$PROJECT_DIR$/player/models.py" />
       </list>
     </option>
   </component>
@@ -121,6 +144,9 @@
     <option name="x" value="-10" />
     <option name="width" value="1420" />
     <option name="height" value="1090" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -218,12 +244,12 @@
       <option name="presentableId" value="Default" />
       <updated>1560738963873</updated>
       <workItem from="1560738969022" duration="4170000" />
-      <workItem from="1560781099542" duration="820000" />
+      <workItem from="1560781099542" duration="2043000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4990000" />
+    <option name="totallyTimeSpent" value="6213000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -328,9 +354,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/player/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/player/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-608">
+        <state relative-caret-position="190">
           <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
@@ -340,8 +376,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/player/templates/player/player_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        <state relative-caret-position="418">
+          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

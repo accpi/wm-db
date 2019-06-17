@@ -10,6 +10,7 @@ from history.models import History
 class PlayerListView(ListView):
     model = Player
 
+
 class PlayerDetailView(ListView):
     model = History
     template_name = 'player/player_detail.html'
