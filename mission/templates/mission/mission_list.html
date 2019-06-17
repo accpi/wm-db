@@ -6,10 +6,10 @@
         <div class="media-body">
             <div class="article-metadata">
                 <a href="{% url 'zone-detail' mission.zone.id %}">{{ mission.zone }}</a>
+                <a href="{% url 'dm-detail' mission.dm.id %}">{{ mission.dm }}</a>
                 <small class="text-muted">{{ mission.date|date:'F d, Y' }}</small>
             </div>
             <h2><a href="{% url 'mission-detail' mission.id %}">{{ mission.title }}</a></h2>
-            <h3><a href="{% url 'dm-detail' mission.dm.id %}">{{ mission.dm }}</a></h3>
             <p class="article-content">
                 <a href="{{ mission.lfg }}">LFG</a> | <a href="{{ mission.aar }}">AAR</a>
             </p>

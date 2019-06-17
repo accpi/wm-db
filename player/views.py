@@ -9,6 +9,7 @@ from history.models import History
 
 class PlayerListView(ListView):
     model = Player
+    paginate_by = 5
 
 
 class PlayerDetailView(ListView):
@@ -86,7 +87,7 @@ class PlayerDeleteView(LoginRequiredMixin, DeleteView):
 
 class CharacterListView(ListView):
     model = Character
-
+    paginate_by = 7
 
 class CharacterDetailView(ListView):
     model = History
