@@ -12,7 +12,7 @@
                 <tr class="bg-starcatyellow">
                     <th scope="col">Character</th>
                     <th scope="col">Player</th>
-                    <th scope="col">Survived</th>
+                    <th scope="col">Perished</th>
                     <th>Race</th>
                     {% if levels.barbarian > 0 %}
                         <th scope="col">Barbarian</th>
@@ -57,7 +57,13 @@
                     <tr>
                         <td><a href="{% url 'character-detail' history.character.id %}">{{ history.character.name }}</a></td>
                         <td><a href="{% url 'player-detail' history.character.player.id %}">{{ history.character.player.reddit }}</a></td>
-                        <td>{{ history.death_bool }}</td>
+                        <td>
+                            {% if history.death_bool %}
+                                Yes
+                            {% else %}
+                                No
+                            {% endif %}
+                        </td>
                         <td><a href="{% url 'race-list' history.character.race.id %}">{{ history.character.race }}</a> </td>
                     {% if levels.barbarian > 0 %}
                         <td>{{ history.character.barbarian }}</td>
