@@ -1,9 +1,5 @@
 {% extends 'mission/base.html' %}
 {% block content %}
-    <div class="content">
-        <h1>{{ object_list.0.race }}</h1>
-    </div>
-
     <article class="content-section">
         <div class="page-details">
             <h1><a href="{% url 'zone-detail' object_list.0.race.id %}">{{ object_list.0.race }}</a> Characters</h1>
