@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{% static 'mission/style_secondary.css' %}">
+    <link rel="shortcut icon" type="image/x-icon" href='../../static/mission/Star%20Cat.ico' />
     <title>West Marches Beta</title>
 </head>
 <body>
@@ -23,8 +24,9 @@
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
                 <a class="nav-item nav-link" href="{% url 'mission-list' %}">Missions</a>
+                <a class="nav-item nav-link" href="{% url 'zone-list' %}">Zones</a>
                 <a class="nav-item nav-link" href="{% url 'player-list' %}">Players</a>
-                <!-- <a class="nav-item nav-link" href="{% url 'character-list' %}">Characters</a> -->
+                <a class="nav-item nav-link" href="{% url 'character-list' %}">Characters</a>
                 <a class="nav-item nav-link" href="{% url 'loot-list' %}">Loot</a>
             </div>
           </div>
